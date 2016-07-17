@@ -13,7 +13,7 @@ local enrageWarn = nil
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Moroes",
 
-	engage_trigger = "Hm, unannounced visitors. Preparations must be made...",
+	engage_trigger = "Hmm, unannounced visitors. Preparations must be made.",
 	engage_message = "%s Engaged - Vanish in ~30sec!",
 
 	vanish = "Vanish",
@@ -191,7 +191,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 15687
 mod.toggleoptions = {"vanish", "enrage", -1, "garrote", "icon", "bosskill"}
-mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90001 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --

@@ -344,7 +344,7 @@ mod.otherMenu = "Outland"
 mod.enabletrigger = {boss, mage, lock, priest, shaman}
 mod.guid = 18831
 mod.toggleoptions = {"shield", "spellshield", "heal", -1, "summon", -1, "whirlwind", "flurry", "smash", "bosskill"}
-mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90001 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -407,7 +407,7 @@ end
 
 function mod:Smash(_, spellID)
 	if db.smash then
-		self:Bar(L["smash_bar"], 16.5, spellID)
+		self:Bar(L["smash_bar"], 10, spellID)
 	end
 end
 

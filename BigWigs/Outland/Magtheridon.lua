@@ -469,7 +469,7 @@ mod.otherMenu = "Outland"
 mod.enabletrigger = {channeler, boss}
 mod.guid = 17257
 mod.toggleoptions = {"escape", "abyssal", "heal", -1, "quake", "nova", "banish", -1, "debris", "debrisinc", -1, "exhaust", "enrage", "bosskill"}
-mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90001 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -561,12 +561,12 @@ function mod:Start()
 	end
 	if db.quake then
 		self:IfMessage(L["quake_message"], "Attention", 30576)
-		self:DelayedMessage(33, L["quake_warning"], "Urgent")
-		self:Bar(L["quake_bar"], 35, 30576)
+		self:DelayedMessage(38, L["quake_warning"], "Urgent")
+		self:Bar(L["quake_bar"], 40, 30576)
 	end
 	if db.nova then
-		self:Bar(L["nova_bar"], 44.5, "Spell_Fire_SealOfFire")
-		self:DelayedMessage(42.5, L["nova_warning"], "Urgent")
+		self:Bar(L["nova_bar"], 50, "Spell_Fire_SealOfFire")
+		self:DelayedMessage(48, L["nova_warning"], "Urgent")
 	end
 	if db.enrage then
 		self:Enrage(1320, nil, true)
