@@ -1,0 +1,8 @@
+------------------------------------------------------------------------
+r80485 | oojoo | 2008-08-15 08:06:01 -0400 (Fri, 15 Aug 2008) | 2 lines
+Changed paths:
+   M /trunk/BigWigs_CommonAuras/CommonAuras.lua
+
+BigWigs_CommonAuras:
+- deDE update, wording and such
+------------------------------------------------------------------------
