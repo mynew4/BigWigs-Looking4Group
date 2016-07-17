@@ -21,7 +21,7 @@ L:RegisterTranslations("enUS", function() return {
 	phase1_trigger = "Madness has brought you here to me. I shall be your undoing!",
 	phase2_trigger = "Simple fools! Time is the fire in which you'll burn!",
 	phase3_trigger = "How can you hope to stand against such overwhelming power?",
-	phase1_message = "Phase 1 - Infernal in ~40sec!",
+	phase1_message = "Phase 1 - Infernal in ~45sec!",
 	phase2_message = "60% - Phase 2",
 	phase3_message = "30% - Phase 3 ",
 
@@ -38,7 +38,7 @@ L:RegisterTranslations("enUS", function() return {
 	infernals = "Infernals",
 	infernals_desc = "Show cooldown timer for Infernal summons.",
 	infernal_bar = "Incoming Infernal",
-	infernal_warning = "Infernal incoming in 17sec!",
+	infernal_warning = "Infernal incoming!",
 	infernal_message = "Infernal Landed! Hellfire in 5sec!",
 
 	nova = "Shadow Nova",
@@ -70,7 +70,7 @@ L:RegisterTranslations("deDE", function() return {
 	phase1_trigger = "Der Wahnsinn f\195\188hrte Euch zu mir. Ich werde Euch das Genick brechen!",
 	phase2_trigger = "Dummk\195\182pfe! Zeit ist das Feuer, in dem Ihr brennen werdet!",
 	phase3_trigger = "Wie k\195\182nnt Ihr hoffen, einer so \195\188berw\195\164ltigenden Macht gewachsen zu sein?",
-	phase1_message = "Phase 1 - Infernos in ~40 Sek!",
+	phase1_message = "Phase 1 - Infernos in ~45 Sek!",
 	phase2_message = "60% - Phase 2",
 	phase3_message = "30% - Phase 3 ",
 
@@ -83,7 +83,7 @@ L:RegisterTranslations("deDE", function() return {
 	enfeeble_warnyou = "Entkr\195\164ften auf DIR!",
 
 	infernal_bar = "Infernos",
-	infernal_warning = "Infernos in 17 Sek!",
+	infernal_warning = "Infernos!",
 	infernal_message = "Infernos in 5 Sek!",
 
 	nova_message = "Schattennova!",
@@ -98,7 +98,7 @@ L:RegisterTranslations("frFR", function() return {
 	phase1_trigger = "La folie vous a fait venir ici, devant moi. Et je serai votre perte !",
 	phase2_trigger = "Imbéciles heureux ! Le temps est le brasier dans lequel vous brûlerez !",
 	phase3_trigger = "Comment pouvez-vous espérer résister devant un tel pouvoir ?",
-	phase1_message = "Phase 1 - Infernal dans ~40 sec. !",
+	phase1_message = "Phase 1 - Infernal dans ~45 sec. !",
 	phase2_message = "60% - Phase 2",
 	phase3_message = "30% - Phase 3 ",
 
@@ -115,7 +115,7 @@ L:RegisterTranslations("frFR", function() return {
 	infernals = "Infernaux",
 	infernals_desc = "Affiche le temps de recharge des invocations d'infernaux.",
 	infernal_bar = "Arrivée d'un infernal",
-	infernal_warning = "Arrivée d'un infernal dans 17 sec. !",
+	infernal_warning = "Arrivée d'un infernal!",
 	infernal_message = "Infernal ! Flammes infernales dans 5 sec. !",
 
 	nova = "Nova de l'ombre",
@@ -137,7 +137,7 @@ L:RegisterTranslations("koKR", function() return {
 	phase1_trigger = "여기까지 오다니 정신이 나간 놈들이 분명하구나. 소원이라면 파멸을 시켜주마!",
 	phase2_trigger = "바보 같으니! 시간은 너의 몸을 태우는 불길이 되리라!",
 	phase3_trigger = "어찌 감히 이렇게 압도적인 힘에 맞서기를 꿈꾸느냐?",
-	phase1_message = "1 단계 - 약 40초 후 불지옥!",
+	phase1_message = "1 단계 - 약 45초 후 불지옥!",
 	phase2_message = "60% - 2 단계",
 	phase3_message = "30% - 3 단계",
 
@@ -154,7 +154,7 @@ L:RegisterTranslations("koKR", function() return {
 	infernals = "불지옥",
 	infernals_desc = "불지옥 소환에 대한 재사용 대기시간을 표시합니다.",
 	infernal_bar = "불지옥 등장",
-	infernal_warning = "17초 이내 불지옥 등장!",
+	infernal_warning = "불지옥 등장!",
 	infernal_message = "불지옥 등장! 5초 이내 지옥불!",
 
 	nova = "암흑 회오리",
@@ -176,7 +176,7 @@ L:RegisterTranslations("zhCN", function() return {
 	phase1_trigger = "疯狂将你们带到我的面前，而我将以死亡终结你们！",
 	phase2_trigger = "愚蠢的家伙！时间就是吞噬你躯体的烈焰！",
 	phase3_trigger = "你如何抵挡这无坚不摧的力量？",
-	phase1_message = "第一阶段 - 约40秒后，地狱火！",
+	phase1_message = "第一阶段 - 约45秒后，地狱火！",
 	phase2_message = "60% - 第二阶段！",
 	phase3_message = "30% - 第三阶段！",
 
@@ -193,7 +193,7 @@ L:RegisterTranslations("zhCN", function() return {
 	infernals = "地狱火警报",
 	infernals_desc = "显示召唤地狱火冷却时间计时条。",
 	infernal_bar = "<即将 地狱火>",
-	infernal_warning = "17秒后，地狱火！",
+	infernal_warning = "地狱火出现",
 	infernal_message = "地狱火出现！5秒后发动，地狱烈焰！",
 
 	nova = "暗影新星",
@@ -216,7 +216,7 @@ L:RegisterTranslations("zhTW", function() return {
 	phase1_trigger = "瘋狂把你帶到我的面前。我會成為你失敗的原因!",
 	phase2_trigger = "頭腦簡單的笨蛋!你在燃燒的是時間的火焰!",
 	phase3_trigger = "你怎能期望抵抗這樣勢不可擋的力量?",
-	phase1_message = "第一階段 - 地獄火將在 40 秒後召喚",
+	phase1_message = "第一階段 - 地獄火將在 45 秒後召喚",
 	phase2_message = "60% - 第二階段",
 	phase3_message = "30% - 第三階段",
 
@@ -233,7 +233,7 @@ L:RegisterTranslations("zhTW", function() return {
 	infernals = "地獄火警告",
 	infernals_desc = "顯示召喚地獄火計時條",
 	infernal_bar = "地獄火",
-	infernal_warning = "17 秒後召喚地獄火",
+	infernal_warning = "召喚地獄火",
 	infernal_message = "5 秒後召喚地獄火",
 
 	nova = "暗影新星警告",
@@ -255,7 +255,7 @@ L:RegisterTranslations("esES", function() return {
 	phase1_trigger = "La locura os ha traído ante mi. ¡Seré vuestro fin!",
 	phase2_trigger = "¡Estúpidos! El tiempo es el fuego en el que arderéis!",
 	phase3_trigger = "¿Cómo podéis esperar rebelaros ante un poder tan aplastante?",
-	phase1_message = "¡Fase 1 - Infernal en ~40seg!",
+	phase1_message = "¡Fase 1 - Infernal en ~45seg!",
 	phase2_message = "60% - Fase 2",
 	phase3_message = "30% - Fase 3 ",
 
@@ -272,7 +272,7 @@ L:RegisterTranslations("esES", function() return {
 	infernals = "Infernales",
 	infernals_desc = "Muestra temporizadores para la invocación de Infernales.",
 	infernal_bar = "~Llega infernal",
-	infernal_warning = "¡Infernal llega en 17seg!",
+	infernal_warning = "¡Infernal llega!",
 	infernal_message = "¡Aterrizó Infernal - Llamas infernales en 5seg!",
 
 	nova = "Nova de las Sombras",
@@ -294,7 +294,7 @@ L:RegisterTranslations("ruRU", function() return {
 	phase1_trigger = "Безумие привело вас сюда, ко мне. Я стану вашей погибелью!",
 	phase2_trigger = "Простофили! Время – это пламя, в котором вы сгорите!",
 	phase3_trigger = "Как ты можешь надеяться выстоять против такой ошеломляющей мощи?",
-	phase1_message = "Фаза 1 - Инфернал через ~40сек!",
+	phase1_message = "Фаза 1 - Инфернал через ~45сек!",
 	phase2_message = "60% - Фаза 2",
 	phase3_message = "30% - Фаза 3 ",
 
@@ -311,7 +311,7 @@ L:RegisterTranslations("ruRU", function() return {
 	infernals = "Инферналы",
 	infernals_desc = "Показывает таймеры призыва Инферналов.",
 	infernal_bar = "Появление Инфернала",
-	infernal_warning = "Появление Инфернала через 17сек!",
+	infernal_warning = "Появление Инфернала!",
 	infernal_message = "Появление Инфернала! Адское Пламя через 5сек!",
 
 	nova = "Кольцо Тьмы",
@@ -334,7 +334,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 15690
 mod.toggleoptions = {"phase", "enfeeble", "nova", -1, "infernals", "despawn", "bosskill"}
-mod.revision = tonumber(("$Revision: 4723 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -366,7 +366,7 @@ function mod:Enfeeble(player, spellID)
 		self:IfMessage(L["enfeeble_message"], "Important", spellID)
 		self:ScheduleEvent("enf1", "BigWigs_Message", 25, L["enfeeble_warning1"], "Attention")
 		self:ScheduleEvent("enf2", "BigWigs_Message", 20, L["enfeeble_warning2"], "Attention")
-		self:Bar(L["enfeeble_bar"], 7, spellID)
+		self:Bar(L["enfeeble_bar"], 9, spellID)
 		self:Bar(L["enfeeble_nextbar"], 30, spellID)
 	end
 	if self.db.profile.nova then
@@ -395,8 +395,8 @@ end
 function mod:Infernal()
 	if self.db.profile.infernals then
 		self:Message(L["infernal_warning"], "Positive")
-		self:DelayedMessage(12, L["infernal_message"], "Urgent", nil, "Alert")
-		self:Bar(L["infernal_bar"], 17, "INV_Stone_05")
+		self:DelayedMessage(0, L["infernal_message"], "Urgent", nil, "Alert")
+		self:Bar(L["infernal_bar"], 0, "INV_Stone_05")
 	end
 	if not self.db.profile.despawn then
 		self:ScheduleEvent("BWInfernalDespawn", self.DespawnTimer, 17, self)

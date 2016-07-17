@@ -28,7 +28,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	earthquake = "Earthquake",
 	earthquake_desc = "Alert when Doomwalker uses his Earthquake ability.",
-	earthquake_message = "Earthquake! ~70sec to next!",
+	earthquake_message = "Earthquake! ~50sec to next!",
 	earthquake_bar = "~Earthquake Cooldown",
 	earthquake_trigger1 = "Tectonic disruption commencing.",
 	earthquake_trigger2 = "Magnitude set. Release.",
@@ -52,7 +52,7 @@ L:RegisterTranslations("esES", function() return {
 
 	earthquake = "Terremoto (Earthquake)",
 	earthquake_desc = "Avisar cuando Caminante del Destino utiliza Terremoto.",
-	earthquake_message = "¡Terremoto! ¡Sig. en ~70 seg!",
+	earthquake_message = "¡Terremoto! ¡Sig. en ~50 seg!",
 	earthquake_bar = "~Terremoto",
 	earthquake_trigger1 = "Iniciando perturbación tectónica.",
 	earthquake_trigger2 = "Magnitud ajustada. Liberar.",
@@ -76,7 +76,7 @@ L:RegisterTranslations("frFR", function() return {
 
 	earthquake = "Séisme",
 	earthquake_desc = "Prévient quand Marche-funeste utilise sa capacité Séisme.",
-	earthquake_message = "Séisme ! Prochain dans ~70 sec. !",
+	earthquake_message = "Séisme ! Prochain dans ~50 sec. !",
 	earthquake_bar = "~Recharge Séisme",
 	earthquake_trigger1 = "Début de la perturbation tectonique.",
 	earthquake_trigger2 = "Magnitude réglée. Déclenchement.",
@@ -100,7 +100,7 @@ L:RegisterTranslations("koKR", function() return {
 
 	earthquake = "지진",
 	earthquake_desc = "파멸의 절단기의 지진 사용 가능 시 경고합니다.",
-	earthquake_message = "지진! 다음은 약 70초 후!",
+	earthquake_message = "지진! 다음은 약 50초 후!",
 	earthquake_bar = "~지진 대기시간",
 	earthquake_trigger1 = "지각 붕괴 실행 중...",
 	earthquake_trigger2 = "진도 조정 완료. 방출!",
@@ -125,7 +125,7 @@ L:RegisterTranslations("deDE", function() return {
 	
 	earthquake = "Erdbeben",
 	earthquake_desc = "Warnt wenn Verdammniswandler Erdbeben benutzt.",
-	earthquake_message = "N\195\164chstes Erdbeben in ~70sek",
+	earthquake_message = "N\195\164chstes Erdbeben in ~50sek",
 	earthquake_bar = "~Erdbeben Cooldown",
 	--earthquake_trigger1 = "",
 	--earthquake_trigger2 = "",
@@ -149,7 +149,7 @@ L:RegisterTranslations("zhTW", function() return {
 
 	earthquake = "地震術",
 	earthquake_desc = "當厄運行者發動地震術時發出警報",
-	earthquake_message = "地震術! 70 秒後再次發動!",
+	earthquake_message = "地震術! 50 秒後再次發動!",
 	earthquake_bar = "<地震術冷卻>",
 	earthquake_trigger1 = "構造瓦解開始。",
 	earthquake_trigger2 = "強度設定。卸除。",
@@ -173,7 +173,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	earthquake = "地震术",
 	earthquake_desc = "当施放地震术时发出警告。",
-	earthquake_message = "地震术！约70秒后，再次发动！",
+	earthquake_message = "地震术！约50秒后，再次发动！",
 	earthquake_bar = "<地震术 冷却>",
 	earthquake_trigger1 = "地面破坏程序启动。",
 	earthquake_trigger2 = "范围确认。释放。",
@@ -197,7 +197,7 @@ L:RegisterTranslations("ruRU", function() return {
 
 	earthquake = "Earthquake",
 	earthquake_desc = "Alert when Doomwalker uses his Earthquake ability.",
-	earthquake_message = "Earthquake! ~70sec to next!",
+	earthquake_message = "Earthquake! ~50sec to next!",
 	earthquake_bar = "~Earthquake Cooldown",
 	earthquake_trigger1 = "Tectonic disruption commencing.",
 	earthquake_trigger2 = "Magnitude set. Release.",
@@ -217,7 +217,7 @@ mod.otherMenu = "Outland"
 mod.enabletrigger = boss
 mod.guid = 17711
 mod.toggleoptions = {"overrun", "earthquake", "enrage", "proximity", "bosskill"}
-mod.revision = tonumber(("$Revision: 4706 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 mod.proximityCheck = function( unit ) return CheckInteractDistance( unit, 3 ) end
 mod.proximitySilent = true
 
@@ -246,11 +246,11 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 		self:TriggerEvent("BigWigs_ShowProximity", self)
 		if db.earthquake then
 			self:Message(L["engage_message"], "Attention")
-			self:Bar(L["earthquake_bar"], 30, "Spell_Nature_Earthquake")
+			self:Bar(L["earthquake_bar"], 25, "Spell_Nature_Earthquake")
 		end
 		if db.overrun then
-			self:Bar(L["overrun_bar"], 26, "Ability_BullRush")
-			self:DelayedMessage(24, L["overrun_soon_message"], "Attention")
+			self:Bar(L["overrun_bar"], 22, "Ability_BullRush")
+			self:DelayedMessage(20, L["overrun_soon_message"], "Attention")
 		end
 	elseif db.overrun and (msg == L["overrun_trigger1"] or msg == L["overrun_trigger2"]) then
 		self:Message(L["overrun_message"], "Important")
@@ -258,7 +258,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 		self:DelayedMessage(28, L["overrun_soon_message"], "Attention")
 	elseif db.earthquake and (msg == L["earthquake_trigger1"] or msg == L["earthquake_trigger2"]) then
 		self:Message(L["earthquake_message"], "Important")
-		self:Bar(L["earthquake_bar"], 70, "Spell_Nature_Earthquake")
+		self:Bar(L["earthquake_bar"], 50, "Spell_Nature_Earthquake")
 	end
 end
 

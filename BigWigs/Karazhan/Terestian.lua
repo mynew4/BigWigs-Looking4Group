@@ -190,7 +190,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 15688
 mod.toggleoptions = {"weak", "enrage", -1, "sacrifice", "icon", "bosskill"}
-mod.revision = tonumber(("$Revision: 4722 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -215,8 +215,8 @@ function mod:Sacrifice(player, spellID)
 	if self.db.profile.sacrifice then
 		self:IfMessage(fmt(L["sacrifice_message"], player), "Attention", spellID)
 		self:Bar(fmt(L["sacrifice_bar"], player), 30, spellID)
-		self:ScheduleEvent("sac1", "BigWigs_Message", 40, L["sacrifice_soon"], "Positive")
-		self:Bar(L["sacrifice_soonbar"], 42, spellID)
+		self:ScheduleEvent("sac1", "BigWigs_Message", 28, L["sacrifice_soon"], "Positive")
+		self:Bar(L["sacrifice_soonbar"], 30, spellID)
 	end
 	self:Icon(player, "icon")
 end

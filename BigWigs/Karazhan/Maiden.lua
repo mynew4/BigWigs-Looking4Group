@@ -13,12 +13,12 @@ local CheckInteractDistance = CheckInteractDistance
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Maiden",
 
-	engage_trigger = "Your behavior will not be tolerated.",
-	engage_message = "Maiden Engaged! Repentance in ~33sec",
+	engage_trigger = "Your behavior will not be tolerated!",
+	engage_message = "Maiden Engaged! Repentance in 30-45sec",
 
 	repentance = "Repentance",
 	repentance_desc = "Estimated timer of Repentance.",
-	repentance_message = "Repentance! Next in ~33sec",
+	repentance_message = "Repentance! Next in 30-45sec",
 	repentance_warning = "Repentance Cooldown Over - Inc Soon!",
 	repentance_bar = "Repentance",
 	repentance_nextbar = "Repentance Cooldown",
@@ -42,9 +42,9 @@ L:RegisterTranslations("deDE", function() return {
 	icon_desc = "Platziert ein Schlachtzugssymbol bei dem Spieler, welcher vom Heiligen Feuer betroffen ist (ben\195\182tigt 'bef\195\182rdert' oder h\195\182her)",
 
 	engage_trigger = "Euer Verhalten wird nicht toleriert.",
-	engage_message = "Maid Engaged! Bu\195\159e in ~33 Sek!",
+	engage_message = "Maid Engaged! Bu\195\159e in 30-45 Sek!",
 
-	repentance_message = "Bu\195\159e! N\195\164chste in ~33 Sek!",
+	repentance_message = "Bu\195\159e! N\195\164chste in 30-45 Sek!",
 	repentance_warning = "Bu\195\159e bald!",
 	repentance_bar = "Bu\195\159e",
 	repentance_nextbar = "N\195\164chste Bu\195\159e",
@@ -54,11 +54,11 @@ L:RegisterTranslations("deDE", function() return {
 
 L:RegisterTranslations("frFR", function() return {
 	engage_trigger = "Votre comportement est inacceptable.",
-	engage_message = "Damoiselle engagée ! Repentir dans ~33 sec.",
+	engage_message = "Damoiselle engagée ! Repentir dans 30-45 sec.",
 
 	repentance = "Repentir",
 	repentance_desc = "Prévient quand la Damoiselle de vertu est susceptible d'utiliser son Repentir.",
-	repentance_message = "Repentir ! Prochain pas avant ~33 sec.",
+	repentance_message = "Repentir ! Prochain pas avant 30-45 sec.",
 	repentance_warning = "Fin du temps de recharge de Repentir - Imminent !",
 	repentance_bar = "Repentir",
 	repentance_nextbar = "~Recharge Repentir",
@@ -73,11 +73,11 @@ L:RegisterTranslations("frFR", function() return {
 
 L:RegisterTranslations("koKR", function() return {
 	engage_trigger = "너희의 행동은 그냥 넘길 수가 없다.",
-	engage_message = "고결의 여신 전투 개시! 약 33초 후 참회",
+	engage_message = "고결의 여신 전투 개시! 약 30-45초 후 참회",
 
 	repentance = "참회",
 	repentance_desc = "참회에 대한 예측 타이머입니다.",
-	repentance_message = "참회! 다음은 약 33초 후!",
+	repentance_message = "참회! 다음은 약 30-45초 후!",
 	repentance_warning = "참회 쿨다운 종료 - 잠시후 시전!",
 	repentance_bar = "참회",
 	repentance_nextbar = "참회 쿨다운",
@@ -92,11 +92,11 @@ L:RegisterTranslations("koKR", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	engage_trigger = "你们的行为是不可饶恕的。",
-	engage_message = "战斗开始！约33秒后，释放悔改！",
+	engage_message = "战斗开始！约30-45秒后，释放悔改！",
 
 	repentance = "悔改",
 	repentance_desc = "悔改冷却时间提醒。",
-	repentance_message = "悔改！约33秒后发动。",
+	repentance_message = "悔改！约30-45秒后发动。",
 	repentance_warning = "悔改 冷却结束，即将发动！",
 	repentance_bar = "<悔改>",
 	repentance_nextbar = "悔改 冷却！",
@@ -111,10 +111,10 @@ L:RegisterTranslations("zhCN", function() return {
 
 L:RegisterTranslations("zhTW", function() return {
 	engage_trigger = "你的行為不能被容忍。",
-	engage_message = "戰鬥開始！33 秒後懺悔！",
+	engage_message = "戰鬥開始！30-45 秒後懺悔！",
 
 	repentance = "懺悔",
-	repentance_message = "懺悔！33 秒後下一次懺悔！",
+	repentance_message = "懺悔！30-45 秒後下一次懺悔！",
 	repentance_warning = "懺悔即將來臨！",
 	repentance_bar = "懺悔計時",
 	repentance_nextbar = "懺悔預備！治療群補上 HoT！",
@@ -129,11 +129,11 @@ L:RegisterTranslations("zhTW", function() return {
 
 L:RegisterTranslations("esES", function() return {
 	engage_trigger = "No se tolerará tu comportamiento.",
-	engage_message = "¡Doncella en combate! Arrepentimiento en ~33 seg",
+	engage_message = "¡Doncella en combate! Arrepentimiento en 30-45 seg",
 
 	repentance = "Arrepentimiento (Repentance)",
 	repentance_desc = "Tiempo estimado de Arrepentimiento.",
-	repentance_message = "Sig. Arrepentimiento en ~33 seg",
+	repentance_message = "Sig. Arrepentimiento en 30-45 seg",
 	repentance_warning = "¡Arrepentimiento en breve!",
 	repentance_bar = "<Arrepentimiento>",
 	repentance_nextbar = "~Arrepentimiento",
@@ -148,11 +148,11 @@ L:RegisterTranslations("esES", function() return {
 -- Translated by wow.playhard.ru translators
 L:RegisterTranslations("ruRU", function() return {
 	engage_trigger = "Ваше поведение нестерпимо.",
-	engage_message = "Контакт с Пресветлой девой! Покаяние за ~33сек",
+	engage_message = "Контакт с Пресветлой девой! Покаяние за 30-45сек",
 
 	repentance = "Покаяние",
 	repentance_desc = "Таймер отсчета до Покаяния.",
-	repentance_message = "Покаяние! Следующее через ~33сек",
+	repentance_message = "Покаяние! Следующее через 30-45сек",
 	repentance_warning = "Покаяние перезарядилось - скоро будет!",
 	repentance_bar = "Покаяние",
 	repentance_nextbar = "Перезарядка Покаяния",
@@ -174,7 +174,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 16457
 mod.toggleoptions = {"repentance", -1, "holyfire", "icon", "proximity", "bosskill"}
-mod.revision = tonumber(("$Revision: 4722 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 mod.proximityCheck = function( unit ) return CheckInteractDistance( unit, 3 ) end
 
 ------------------------------
@@ -206,8 +206,8 @@ function mod:Repentance(_, spellID)
 		self:TriggerEvent("BigWigs_StopBar", self, L["repentance_nextbar"])
 		self:IfMessage(L["repentance_message"], "Important", spellID)
 		self:Bar(L["repentance_bar"], 12, spellID)
-		self:ScheduleEvent("rep1", "BigWigs_Message", 33, L["repentance_warning"], "Urgent", nil, "Alarm")
-		self:Bar(L["repentance_nextbar"], 33, spellID)
+		self:ScheduleEvent("rep1", "BigWigs_Message", 30, L["repentance_warning"], "Urgent", nil, "Alarm")
+		self:Bar(L["repentance_nextbar"], 30, spellID)
 	end
 end
 
@@ -215,8 +215,8 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 	if msg == L["engage_trigger"] then
 		if self.db.profile.repentance then
 			self:Message(L["engage_message"], "Attention")
-			self:ScheduleEvent("rep1", "BigWigs_Message", 33, L["repentance_warning"], "Urgent", nil, "Alarm")
-			self:Bar(L["repentance_nextbar"], 33, 29511)
+			self:ScheduleEvent("rep1", "BigWigs_Message", 30, L["repentance_warning"], "Urgent", nil, "Alarm")
+			self:Bar(L["repentance_nextbar"], 30, 29511)
 		end
 
 		self:TriggerEvent("BigWigs_ShowProximity", self)

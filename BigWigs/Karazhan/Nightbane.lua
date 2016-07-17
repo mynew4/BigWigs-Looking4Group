@@ -271,14 +271,15 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 17225
 mod.toggleoptions = {"engage", "phase", "fear", "charr", "bones", "bosskill"}
-mod.revision = tonumber(("$Revision: 4702 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
 ------------------------------
 
 function mod:OnEnable()
-	self:AddCombatListener("SPELL_CAST_START", "Fear", 36922)
+	-- self:AddCombatListener("SPELL_CAST_START", "Fear", 36922)
+	self:AddCombatListener("SPELL_CAST_START", "Fear", 39427)
 	self:AddCombatListener("SPELL_AURA_APPLIED", "CharredEarth", 30129)
 	self:AddCombatListener("SPELL_CAST_SUCCESS", "Bones", 37098)
 	self:AddCombatListener("UNIT_DIED", "BossDeath")
@@ -294,10 +295,10 @@ end
 function mod:Fear(_, spellID)
 	if self.db.profile.fear then
 		self:CancelScheduledEvent("fear")
-		self:Bar(L["fear_bar"], 2.5, spellID)
+		self:Bar(L["fear_bar"], 1.5, spellID)
 		self:IfMessage(L["fear_message"], "Positive", spellID)
-		self:Bar(L["fear_nextbar"], 37, spellID)
-		self:ScheduleEvent("fear", "BigWigs_Message", 35, L["fear_warning"], "Positive")
+		self:Bar(L["fear_nextbar"], 34, spellID)
+		self:ScheduleEvent("fear", "BigWigs_Message", 32, L["fear_warning"], "Positive")
 	end
 end
 
@@ -310,7 +311,7 @@ end
 function mod:Bones(_, spellID)
 	if self.db.profile.bones then
 		self:IfMessage(L["bones_message"], "Urgent", spellID)
-		self:Bar(L["bones"], 11, spellID)
+		self:Bar(L["bones"], 15, spellID)
 	end
 end
 
@@ -326,17 +327,17 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 			self:Message(L["engage_message"]:format(boss), "Positive")
 		end
 		if self.db.profile.fear then
-			self:Bar(L["fear_nextbar"], 35, "Spell_Shadow_PsychicScream")
-			self:ScheduleEvent("fear", "BigWigs_Message", 33, L["fear_warning"], "Positive")
+			self:Bar(L["fear_nextbar"], 29.5, "Spell_Shadow_PsychicScream")
+			self:ScheduleEvent("fear", "BigWigs_Message", 27.5, L["fear_warning"], "Positive")
 		end
 	elseif self.db.profile.phase and msg == L["airphase_trigger"] then
 		self:Message(L["airphase_message"], "Attention", nil, "Info")
 		self:CancelScheduledEvent("fear")
 		self:TriggerEvent("BigWigs_StopBar", self, L["fear_warning"])
-		self:Bar(L["landphase_message"], 57, "INV_Misc_Head_Dragon_01")
+		self:Bar(L["landphase_message"], 76, "INV_Misc_Head_Dragon_01")
 	elseif self.db.profile.phase and (msg == L["landphase_trigger1"] or msg == L["landphase_trigger2"]) then
 		self:Message(L["landphase_message"], "Important", nil, "Long")
-		self:Bar(L["landphase_message"], 17, "INV_Misc_Head_Dragon_01")
+		self:Bar(L["landphase_message"], 10, "INV_Misc_Head_Dragon_01")
 	end
 end
 

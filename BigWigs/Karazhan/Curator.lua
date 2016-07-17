@@ -190,7 +190,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 15691
 mod.toggleoptions = {"weaken", "weaktime", "berserk", "enrage", "proximity", "bosskill"}
-mod.revision = tonumber(("$Revision: 4722 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 mod.proximityCheck = function( unit ) return CheckInteractDistance( unit, 3 ) end
 
 ------------------------------
@@ -219,10 +219,10 @@ function mod:Evocate(_, spellID)
 		self:ScheduleEvent("weak2", "BigWigs_Message", 20, L["weaken_fade_message"], "Important", nil, "Alarm")
 	end
 	if self.db.profile.weaktime then
-		self:Bar(L["weaktime_bar"], 115, spellID)
-		self:ScheduleEvent("evoc1", "BigWigs_Message", 45, L["weaktime_message3"], "Positive")
-		self:ScheduleEvent("evoc2", "BigWigs_Message", 85, L["weaktime_message2"], "Attention")
-		self:ScheduleEvent("evoc3", "BigWigs_Message", 105, L["weaktime_message1"], "Urgent")
+		self:Bar(L["weaktime_bar"], 120, spellID)
+		self:ScheduleEvent("evoc1", "BigWigs_Message", 50, L["weaktime_message3"], "Positive")
+		self:ScheduleEvent("evoc2", "BigWigs_Message", 90, L["weaktime_message2"], "Attention")
+		self:ScheduleEvent("evoc3", "BigWigs_Message", 110, L["weaktime_message1"], "Urgent")
 	end
 end
 
@@ -247,13 +247,13 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 		self:TriggerEvent("BigWigs_ShowProximity", self)
 
 		if self.db.profile.berserk then
-			self:Enrage(600, true)
+			self:Enrage(720, true)
 		end
 		if self.db.profile.weaktime then
-			self:Bar(L["weaktime_bar"], 109, 30254)
-			self:ScheduleEvent("evoc1", "BigWigs_Message", 39, L["weaktime_message3"], "Positive")
-			self:ScheduleEvent("evoc2", "BigWigs_Message", 79, L["weaktime_message2"], "Attention")
-			self:ScheduleEvent("evoc3", "BigWigs_Message", 99, L["weaktime_message1"], "Urgent")
+			self:Bar(L["weaktime_bar"], 102, 30254)
+			self:ScheduleEvent("evoc1", "BigWigs_Message", 32, L["weaktime_message3"], "Positive")
+			self:ScheduleEvent("evoc2", "BigWigs_Message", 72, L["weaktime_message2"], "Attention")
+			self:ScheduleEvent("evoc3", "BigWigs_Message", 92, L["weaktime_message1"], "Urgent")
 		end
 	end
 end

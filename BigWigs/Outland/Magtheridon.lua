@@ -22,8 +22,8 @@ L:RegisterTranslations("enUS", function() return {
 
 	escape = "Escape",
 	escape_desc = "Countdown until Magtheridon breaks free.",
-	escape_trigger1 = "%%s's bonds begin to weaken!",
-	escape_trigger2 = "I... am... unleashed!",
+	escape_trigger1 = "Magtheridon's bonds begin to weaken!",
+	escape_trigger2 = "I...am...UNLEASHED!!!",
 	escape_warning1 = "%s Engaged - Breaks free in 2min!",
 	escape_warning2 = "Breaks free in 1min!",
 	escape_warning3 = "Breaks free in 30sec!",
@@ -39,6 +39,11 @@ L:RegisterTranslations("enUS", function() return {
 	heal = "Heal",
 	heal_desc = "Warn when a Hellfire Channeler starts to heal.",
 	heal_message = "Healing!",
+
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
 
 	nova = "Blast Nova",
 	nova_desc = "Estimated Blast Nova timers.",
@@ -90,6 +95,11 @@ L:RegisterTranslations("esES", function() return {
 	heal_desc = "Avisar cuando Canalizador Fuego Infernal empieza a curar.",
 	heal_message = "¡Curando!",
 
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
+
 	nova = "Nova explosiva (Blast Nova)",
 	nova_desc = "Temporizadores estimados de Nova explosiva.",
 	nova_ = "Nova explosiva!", -- The start exclamation symbol '¡' is missing because this message is used as a trigger, must be left in esES without the symbol. Whon't work otherwise.
@@ -139,6 +149,11 @@ L:RegisterTranslations("deDE", function() return {
 	heal = "Heilung",
 	heal_desc = "Warnt, wenn ein Kanalisierer anf\195\164ngt zu heilen",
 	heal_message = "Heilung!",
+	
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
 
 	nova = "Drucknova",
 	nova_desc = "Gesch\195\164tzte Drucknova Timer",
@@ -189,6 +204,11 @@ L:RegisterTranslations("frFR", function() return {
 	heal = "Soin",
 	heal_desc = "Prévient quand un Canaliste des Flammes infernales commence à soigner.",
 	heal_message = "Se soigne !",
+	
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
 
 	nova = "Nova explosive",
 	nova_desc = "Estimation du temps de la Nova explosive.",
@@ -239,6 +259,11 @@ L:RegisterTranslations("koKR", function() return {
 	heal = "치유",
 	heal_desc = "지옥불 역술사 치유 시전 시 경고합니다.",
 	heal_message = "치유 시전!",
+	
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
 
 	nova = "파열의 회오리",
 	nova_desc = "파열의 회오리에 대한 예측 타이머입니다.",
@@ -289,6 +314,11 @@ L:RegisterTranslations("zhCN", function() return {
 	heal = "治疗",
 	heal_desc = "当地狱火导魔者施放治疗时发出警报。",
 	heal_message = "黑暗愈合！",
+	
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
 
 	nova = "冲击新星",
 	nova_desc = "冲击新星计时。",
@@ -339,6 +369,11 @@ L:RegisterTranslations("zhTW", function() return {
 	heal = "黑暗治療",
 	heal_desc = "當地獄火導魔師開始治療時發出警報",
 	heal_message = "黑暗治療 - 快中斷!",
+	
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
 
 	nova = "衝擊新星",
 	nova_desc = "衝擊新星計時",
@@ -389,6 +424,11 @@ L:RegisterTranslations("ruRU", function() return {
 	heal = "Исцеление",
 	heal_desc = "Предупреждать когда Чаротворцы начинают Исцелять.",
 	heal_message = "Исцеление!",
+	
+	quake = "Quake",
+	quake_message = "Quake",
+	quake_warning = "Quake soon!",
+	quake_bar = "Quake",
 
 	nova = "Вспышка Огненной звезды",
 	nova_desc = "Таймеры Вспышки Огненной звезды.",
@@ -428,8 +468,8 @@ mod.zonename = BZ["Magtheridon's Lair"]
 mod.otherMenu = "Outland"
 mod.enabletrigger = {channeler, boss}
 mod.guid = 17257
-mod.toggleoptions = {"escape", "abyssal", "heal", -1, "nova", "banish", -1, "debris", "debrisinc", -1, "exhaust", "enrage", "bosskill"}
-mod.revision = tonumber(("$Revision: 4704 $"):sub(12, -3))
+mod.toggleoptions = {"escape", "abyssal", "heal", -1, "quake", "nova", "banish", -1, "debris", "debrisinc", -1, "exhaust", "enrage", "bosskill"}
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -440,6 +480,7 @@ function mod:OnEnable()
 	self:AddCombatListener("SPELL_AURA_APPLIED", "Debris", 36449)
 	self:AddCombatListener("SPELL_SUMMON", "Abyssal", 30511)
 	self:AddCombatListener("SPELL_CAST_START", "Heal", 30528)
+	self:AddCombatListener("SPELL_CAST_SUCCESS", "Quake", 30576)
 	self:AddCombatListener("SPELL_AURA_REMOVED", "BanishRemoved", 30168)
 	self:AddCombatListener("UNIT_DIED", "Deaths")
 
@@ -486,6 +527,14 @@ function mod:Heal(_, spelID)
 	end
 end
 
+function mod:Quake(_, spellID)
+	if db.quake then
+		self:IfMessage(L["quake_message"], "Attention", spellID)
+		self:DelayedMessage(48, L["quake_warning"], "Urgent")
+		self:Bar(L["quake_bar"], 50, spellID)
+	end
+end
+
 function mod:BanishRemoved()
 	if db.banish then
 		self:IfMessage(L["banish_over_message"], "Attention", 30168)
@@ -510,12 +559,17 @@ function mod:Start()
 	if db.escape then
 		self:Message(L["escape_message"]:format(boss), "Important", nil, "Alert")
 	end
+	if db.quake then
+		self:IfMessage(L["quake_message"], "Attention", 30576)
+		self:DelayedMessage(33, L["quake_warning"], "Urgent")
+		self:Bar(L["quake_bar"], 35, 30576)
+	end
 	if db.nova then
-		self:Bar(L["nova_bar"], 58, "Spell_Fire_SealOfFire")
-		self:DelayedMessage(56, L["nova_warning"], "Urgent")
+		self:Bar(L["nova_bar"], 44.5, "Spell_Fire_SealOfFire")
+		self:DelayedMessage(42.5, L["nova_warning"], "Urgent")
 	end
 	if db.enrage then
-		self:Enrage(1200, nil, true)
+		self:Enrage(1320, nil, true)
 	end
 end
 
@@ -552,7 +606,7 @@ end
 function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
 	if db.nova and msg:find(L["nova_"]) then
 		self:Message(L["nova_"], "Positive")
-		self:Bar(L["nova_bar"], 51, "Spell_Fire_SealOfFire")
+		self:Bar(L["nova_bar"], 50, "Spell_Fire_SealOfFire")
 		self:Bar(L["nova_cast"], 12, "Spell_Fire_SealOfFire")
 		self:DelayedMessage(48, L["nova_warning"], "Urgent")
 	end

@@ -14,11 +14,11 @@ L:RegisterTranslations("enUS", function() return {
 	cmd = "Moroes",
 
 	engage_trigger = "Hm, unannounced visitors. Preparations must be made...",
-	engage_message = "%s Engaged - Vanish in ~35sec!",
+	engage_message = "%s Engaged - Vanish in ~30sec!",
 
 	vanish = "Vanish",
 	vanish_desc = "Estimated timers for when Moroes next vanishes.",
-	vanish_message = "Vanished! Next in ~35sec!",
+	vanish_message = "Vanished! Next in ~30sec!",
 	vanish_warning = "Vanish Soon!",
 	vanish_bar = "~Vanish Cooldown",
 
@@ -35,11 +35,11 @@ L:RegisterTranslations("enUS", function() return {
 
 L:RegisterTranslations("frFR", function() return {
 	engage_trigger = "Hum. Des visiteurs imprévus. Il va falloir se préparer.",
-	engage_message = "Moroes engagé - Disparition dans ~35 sec. !",
+	engage_message = "Moroes engagé - Disparition dans ~30 sec. !",
 
 	vanish = "Disparition",
 	vanish_desc = "Prévient quand Moroes est susceptible de disparaître.",
-	vanish_message = "Disparu ! Prochain dans ~35 sec. !",
+	vanish_message = "Disparu ! Prochain dans ~30 sec. !",
 	vanish_warning = "Disparition imminente !",
 	vanish_bar = "~Recharge Disparition",
 
@@ -64,14 +64,14 @@ L:RegisterTranslations("deDE", function() return {
 	icon = "Icon",
 	icon_desc = "Platziert ein Schlachtzugssymbol bei dem Spieler, welcher von Erdrosseln betroffen ist (ben\195\182tigt 'bef\195\182rdert' oder h\195\182her)",
 
-	vanish_message = "Verschwunden! N\195\164chste in ~35 Sek!",
+	vanish_message = "Verschwunden! N\195\164chste in ~30 Sek!",
 	vanish_warning = "Verschwinden bald!",
 	vanish_bar = "N\195\164chste Verschwinden",
 
 	garrote_message = "Erdrosseln: %s",
 
 	engage_trigger = "Hm, unangek\195\188ndigte Besucher. Es m\195\188ssen Vorbereitungen getroffen werden...",
-	engage_message = "%s Engaged - Verschwinden in ~35 Sek!",
+	engage_message = "%s Engaged - Verschwinden in ~30 Sek!",
 
 	enrage_message = "Enrage!",
 	enrage_warning = "Enrage bald!",
@@ -79,11 +79,11 @@ L:RegisterTranslations("deDE", function() return {
 
 L:RegisterTranslations("koKR", function() return {
 	engage_trigger = "음, 예상치 못한 손님들이군. 준비를 해야겠어...",
-	engage_message = "%s 전투 시작 - 약 35초 후 소멸!",
+	engage_message = "%s 전투 시작 - 약 30초 후 소멸!",
 
 	vanish = "소멸",
 	vanish_desc = "모로스의 다음 소멸에 대한 예상 타이머입니다.",
-	vanish_message = "소멸! 다음은 약 35초 후!",
+	vanish_message = "소멸! 다음은 약 30초 후!",
 	vanish_warning = "잠시 후 소멸!", 
 	vanish_bar = "~소멸 대기시간",
 
@@ -100,11 +100,11 @@ L:RegisterTranslations("koKR", function() return {
 
 L:RegisterTranslations("zhCN", function() return {
 	engage_trigger = "啊，不速之客。我得准备一下……",
-	engage_message = "%s 激活！约35秒后，消失！",
+	engage_message = "%s 激活！约30秒后，消失！",
 
 	vanish = "消失",
 	vanish_desc = "消失预计冷却计时条。",
-	vanish_message = "消失！约35秒后，再次消失！",
+	vanish_message = "消失！约30秒后，再次消失！",
 	vanish_warning = "即将 消失！",
 	vanish_bar = "<消失 冷却>",
 
@@ -121,11 +121,11 @@ L:RegisterTranslations("zhCN", function() return {
 
 L:RegisterTranslations("zhTW", function() return {
 	engage_trigger = "嗯，突然上門的訪客。一定要做好準備……",
-	engage_message = "%s 進入戰鬥 - 將於 35 秒後消失",
+	engage_message = "%s 進入戰鬥 - 將於 30 秒後消失",
 
 	vanish = "消失預警",
 	vanish_desc = "顯示摩洛消失提示",
-	vanish_message = "消失 - 35 秒再次消失",
+	vanish_message = "消失 - 30 秒再次消失",
 	vanish_warning = "摩洛即將消失",
 	vanish_bar = "消失倒數",
 
@@ -142,11 +142,11 @@ L:RegisterTranslations("zhTW", function() return {
 
 L:RegisterTranslations("esES", function() return {
 	engage_trigger = "Mm, visita inesperada. Hay que hacer los preparativos...",
-	engage_message = "%s Activado - Desvanecer en ~35sec!",
+	engage_message = "%s Activado - Desvanecer en ~30sec!",
 
 	vanish = "Desvanecer (Vanish)",
 	vanish_desc = "Temporizadores estimados para cuando Moroes se desvanece.",
-	vanish_message = "¡Desvanecer! ¡Siguiente en ~35sec!",
+	vanish_message = "¡Desvanecer! ¡Siguiente en ~30sec!",
 	vanish_warning = "¡Desvanecer en breve!",
 	vanish_bar = "~Desvanecer",
 
@@ -163,11 +163,11 @@ L:RegisterTranslations("esES", function() return {
 -- Translated by wow.playhard.ru translators
 L:RegisterTranslations("ruRU", function() return {
 	engage_trigger = "Хмм, неожиданные посетители. Нужно подготовиться…",
-	engage_message = "Контакт с %s - исчезновение за ~35 сек",
+	engage_message = "Контакт с %s - исчезновение за ~30 сек",
 
 	vanish = "Исчезновение",
 	vanish_desc = "Включает таймеры для следующего исчезновения ",
-	vanish_message = "Исчез! Повтор через ~35 сек!",
+	vanish_message = "Исчез! Повтор через ~30 сек!",
 	vanish_warning = "Скоро Исчезновение!",
 	vanish_bar = "~перезарядка Исчезновения",
 
@@ -191,7 +191,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 15687
 mod.toggleoptions = {"vanish", "enrage", -1, "garrote", "icon", "bosskill"}
-mod.revision = tonumber(("$Revision: 4692 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -227,8 +227,8 @@ end
 function mod:Vanish(_, spellID)
 	if self.db.profile.vanish then
 		self:IfMessage(L["vanish_message"], "Urgent", spellID, "Alert")
-		self:Bar(L["vanish_bar"], 35, spellID)
-		self:DelayedMessage(30, L["vanish_warning"], "Attention")
+		self:Bar(L["vanish_bar"], 30, spellID)
+		self:DelayedMessage(25, L["vanish_warning"], "Attention")
 	end
 end
 
@@ -238,8 +238,8 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 		self:Message(L["engage_message"]:format(boss), "Attention")
 
 		if self.db.profile.vanish then
-			self:Bar(L["vanish_bar"], 35, 29448)
-			self:DelayedMessage(30, L["vanish_warning"], "Attention")
+			self:Bar(L["vanish_bar"], 30, 29448)
+			self:DelayedMessage(25, L["vanish_warning"], "Attention")
 		end
 	end
 end

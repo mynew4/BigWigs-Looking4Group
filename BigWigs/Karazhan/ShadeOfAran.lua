@@ -255,7 +255,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 16524
 mod.toggleoptions = {"adds", "drink", -1, "blizzard", "pull", "flame", "bosskill"}
-mod.revision = tonumber(("$Revision: 4722 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -302,7 +302,7 @@ end
 function mod:Drinking()
 	if self.db.profile.drink then
 		self:IfMessage(L["drink_message"], "Positive", 29963) --Polymorph ID
-		self:Bar(L["drink_bar"], 15, 29978) --Pyroblast ID
+		self:Bar(L["drink_bar"], 12, 29978) --Pyroblast ID
 	end
 end
 
@@ -321,7 +321,7 @@ function mod:Pull(_, spellID)
 		last = time
 		if self.db.profile.pull then
 			self:IfMessage(L["pull_message"], "Attention", spellID)
-			self:Bar(L["pull_bar"], 12, spellID)
+			self:Bar(L["pull_bar"], 11.2, spellID)
 		end
 	end
 end

@@ -20,7 +20,7 @@ local db = nil
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Maulgar",
 
-	engage_trigger = "Gronn are the real power in Outland!",
+	engage_trigger = "Gronn are the real power in outland.",
 
 	heal = "Heal",
 	heal_desc = "Warn when Blindeye the Seer begins to cast a Heal.",
@@ -46,7 +46,7 @@ L:RegisterTranslations("enUS", function() return {
 	whirlwind_message = "Maulgar - Whirlwind for 15sec!",
 	whirlwind_bar = "Whirlwind",
 	whirlwind_nextbar = "~Whirlwind Cooldown",
-	whirlwind_warning1 = "Maulgar Engaged - Whirlwind in ~50sec!",
+	whirlwind_warning1 = "Maulgar Engaged - Whirlwind in ~30sec!",
 	whirlwind_warning2 = "Whirlwind Soon!",
 
 	flurry = "Flurry",
@@ -86,7 +86,7 @@ L:RegisterTranslations("esES", function() return {
 	whirlwind_message = "¡Maulgar - Torbellino durante 15seg!",
 	whirlwind_bar = "<Torbellino>",
 	whirlwind_nextbar = "~Torbellino",
-	whirlwind_warning1 = "¡Maulgar Activado - Torbellino en ~50seg!",
+	whirlwind_warning1 = "¡Maulgar Activado - Torbellino en ~30seg!",
 	whirlwind_warning2 = "Torbellino en breve",
 
 	flurry = "Aluvión (Flurry)",
@@ -126,7 +126,7 @@ L:RegisterTranslations("frFR", function() return {
 	whirlwind_message = "Maulgar - Toubillon pendant 15 sec. !",
 	whirlwind_bar = "Tourbillon",
 	whirlwind_nextbar = "~Recharge Tourbillon",
-	whirlwind_warning1 = "Maulgar engagé - Tourbillon dans ~50 sec. !",
+	whirlwind_warning1 = "Maulgar engagé - Tourbillon dans ~30 sec. !",
 	whirlwind_warning2 = "Tourbillon imminent !",
 
 	flurry = "Rafale",
@@ -163,7 +163,7 @@ L:RegisterTranslations("deDE", function() return {
 	whirlwind_message = "Maulgar - Wirbelwind f\195\188r 15sek!",
 	whirlwind_bar = "Wirbelwind",
 	whirlwind_nextbar = "~N\195\164chster Wirbelwind",
-	whirlwind_warning1 = "Maulgar angegriffen - Wirbelwind in ~50sek!",
+	whirlwind_warning1 = "Maulgar angegriffen - Wirbelwind in ~30sek!",
 	whirlwind_warning2 = "Wirbelwind bald!",
 
 	flurry = "Schlaghagel",
@@ -203,7 +203,7 @@ L:RegisterTranslations("koKR", function() return {
 	whirlwind_message = "마울가르 - 15초간 소용돌이!",
 	whirlwind_bar = "소용돌이",
 	whirlwind_nextbar = "~소용돌이 대기시간",
-	whirlwind_warning1 = "마울가르 전투 개시 - 약 50초 후 소용돌이!",
+	whirlwind_warning1 = "마울가르 전투 개시 - 약 30초 후 소용돌이!",
 	whirlwind_warning2 = "잠시 후 소용돌이!",
 
 	flurry = "질풍",
@@ -243,7 +243,7 @@ L:RegisterTranslations("zhCN", function() return {
 	whirlwind_message = "莫加尔 - 旋风斩！15秒。",
 	whirlwind_bar = "<旋风斩>",
 	whirlwind_nextbar = "<旋风斩 冷却>",
-	whirlwind_warning1 = "莫加尔 激活！约50秒后，旋风斩！",
+	whirlwind_warning1 = "莫加尔 激活！约30秒后，旋风斩！",
 	whirlwind_warning2 = "即将 旋风斩！",
 
 	flurry = "乱舞",
@@ -281,7 +281,7 @@ L:RegisterTranslations("zhTW", function() return {
 	whirlwind_message = "大君王莫卡爾 - 旋風斬 15 秒",
 	whirlwind_bar = "<旋風斬>",
 	whirlwind_nextbar = "<下一次旋風斬>",
-	whirlwind_warning1 = "進入戰鬥 - 50 秒後施放旋風斬",
+	whirlwind_warning1 = "進入戰鬥 - 30 秒後施放旋風斬",
 	whirlwind_warning2 = "大君王莫卡爾即將施放旋風斬",
 
 	flurry = "亂舞警告",
@@ -321,7 +321,7 @@ L:RegisterTranslations("ruRU", function() return {
 	whirlwind_message = "Молгар - Вихрь через 15сек!",
 	whirlwind_bar = "Вихрь",
 	whirlwind_nextbar = "~перезарядка Вихря",
-	whirlwind_warning1 = "Контакт с Молгаром - Вихрь через ~50сек!",
+	whirlwind_warning1 = "Контакт с Молгаром - Вихрь через ~30сек!",
 	whirlwind_warning2 = "Скоро Вихрь!",
 
 	flurry = "Шквал",
@@ -344,7 +344,7 @@ mod.otherMenu = "Outland"
 mod.enabletrigger = {boss, mage, lock, priest, shaman}
 mod.guid = 18831
 mod.toggleoptions = {"shield", "spellshield", "heal", -1, "summon", -1, "whirlwind", "flurry", "smash", "bosskill"}
-mod.revision = tonumber(("$Revision: 4722 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -387,8 +387,8 @@ function mod:Whirlwind(_, spellID)
 	if db.whirlwind then
 		self:IfMessage(L["whirlwind_message"], "Important", spellID)
 		self:Bar(L["whirlwind_bar"], 15, spellID)
-		self:DelayedMessage(45, L["whirlwind_warning2"], "Urgent")
-		self:Bar(L["whirlwind_nextbar"], 50, spellID)
+		self:DelayedMessage(75, L["whirlwind_warning2"], "Urgent")
+		self:Bar(L["whirlwind_nextbar"], 80, spellID)
 	end
 end
 
@@ -407,7 +407,7 @@ end
 
 function mod:Smash(_, spellID)
 	if db.smash then
-		self:Bar(L["smash_bar"], 10, spellID)
+		self:Bar(L["smash_bar"], 16.5, spellID)
 	end
 end
 
@@ -423,11 +423,11 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 
 		if db.whirlwind then
 			self:Message(L["whirlwind_warning1"], "Attention")
-			self:DelayedMessage(45, L["whirlwind_warning2"], "Urgent")
-			self:Bar(L["whirlwind_nextbar"], 50, 33238)
+			self:DelayedMessage(25, L["whirlwind_warning2"], "Urgent")
+			self:Bar(L["whirlwind_nextbar"], 30, 33238)
 		end
 		if db.spellshield then
-			self:Bar(L["spellshield_bar"], 30, 33054)
+			self:Bar(L["spellshield_bar"], 33.5, 33054)
 		end
 	end
 end

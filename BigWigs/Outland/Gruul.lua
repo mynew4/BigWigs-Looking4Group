@@ -42,7 +42,7 @@ L:RegisterTranslations("enUS", function() return {
 
 	grasp = "Grasp",
 	grasp_desc = "Grasp warnings and timers.",
-	grasp_message = "Ground Slam - Shatter in ~10sec!",
+	grasp_message = "Ground Slam - Shatter in ~17sec!",
 	grasp_warning = "Ground Slam Soon",
 	grasp_bar = "~Ground Slam Cooldown",
 
@@ -70,7 +70,7 @@ L:RegisterTranslations("frFR", function() return {
 
 	grasp = "Emprise",
 	grasp_desc = "Avertissements et délais pour l'Emprise du seigneur gronn.",
-	grasp_message = "Heurt terrestre - Fracasser dans ~10 sec !",
+	grasp_message = "Heurt terrestre - Fracasser dans ~17 sec !",
 	grasp_warning = "Heurt terrestre imminent",
 	grasp_bar = "~Recharge Heurt terrestre",
 
@@ -126,7 +126,7 @@ L:RegisterTranslations("koKR", function() return {
 
 	grasp = "손아귀",
 	grasp_desc = "손아귀 경고와 타이머입니다.",
-	grasp_message = "땅 울리기 - 약 10초 이내 산산조각!",
+	grasp_message = "땅 울리기 - 약 17초 이내 산산조각!",
 	grasp_warning = "잠시 후 땅 울리기",
 	grasp_bar = "~땅 울리기 대기시간",
 
@@ -154,7 +154,7 @@ L:RegisterTranslations("zhTW", function() return {
 
 	grasp = "破碎警告",
 	grasp_desc = "當戈魯爾施放大地猛擊跟破碎時發送警告並顯示計時條",
-	grasp_message = "大地猛擊 - 10 秒內破碎",
+	grasp_message = "大地猛擊 - 17 秒內破碎",
 	grasp_warning = "大地猛擊即將來臨!",
 	grasp_bar = "<大地猛擊>",
 
@@ -182,7 +182,7 @@ L:RegisterTranslations("zhCN", function() return {
 
 	grasp = "碎裂",
 	grasp_desc = "碎裂警报计时条。",
-	grasp_message = "大地冲击！约10秒后，破碎！",
+	grasp_message = "大地冲击！约17秒后，破碎！",
 	grasp_warning = "即将 大地冲击！",
 	grasp_bar = "<大地冲击 冷却>",
 
@@ -210,7 +210,7 @@ L:RegisterTranslations("esES", function() return {
 
 	grasp = "Embate en el suelo (Ground Slam)",
 	grasp_desc = "Avisos de Embate en el suelo y trizar (Shatter).",
-	grasp_message = "¡Embate en el suelo! - Trizar en ~10seg",
+	grasp_message = "¡Embate en el suelo! - Trizar en ~17seg",
 	grasp_warning = "Posible Embate",
 	grasp_bar = "~Embate",
 
@@ -238,7 +238,7 @@ L:RegisterTranslations("ruRU", function() return {
 
 	grasp = "Хватка",
 	grasp_desc = "Grasp warnings and timers.",
-	grasp_message = "Прах земной - Раскалывание через ~10сек!",
+	grasp_message = "Прах земной - Раскалывание через ~17сек!",
 	grasp_warning = "Скоро Прах земной",
 	grasp_bar = "~Прах земной",
 
@@ -265,7 +265,7 @@ mod.otherMenu = "Outland"
 mod.enabletrigger = boss
 mod.guid = 19044
 mod.toggleoptions = {"grasp", "grow", -1, "cavein", "silence", "proximity", "bosskill"}
-mod.revision = tonumber(("$Revision: 4722 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
 mod.proximityCheck = function(unit)
 	for k, v in pairs(bandages) do
 		if IsItemInRange(k, unit) == 1 then
@@ -330,8 +330,8 @@ function mod:Shatter()
 
 	if db.grasp then
 		self:IfMessage(L["shatter_message"], "Positive", 33654)
-		self:DelayedMessage(56, L["grasp_warning"], "Urgent")
-		self:Bar(L["grasp_bar"], 62, 33525)
+		self:DelayedMessage(58, L["grasp_warning"], "Urgent")
+		self:Bar(L["grasp_bar"], 64, 33525)
 	end
 end
 
@@ -340,7 +340,7 @@ function mod:Slam(_, spellID)
 
 	if db.grasp then
 		self:IfMessage(L["grasp_message"], "Attention", spellID)
-		self:Bar(L["shatter_message"], 10, 33654)
+		self:Bar(L["shatter_message"], 17, 33654)
 	end
 end
 
@@ -354,12 +354,12 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 		self:Message(L["engage_message"]:format(boss), "Attention")
 
 		if db.grasp then
-			self:DelayedMessage(30, L["grasp_warning"], "Urgent")
-			self:Bar(L["grasp_bar"], 33, 33525)
+			self:DelayedMessage(32, L["grasp_warning"], "Urgent")
+			self:Bar(L["grasp_bar"], 35, 33525)
 		end
 		if db.silence then
-			self:DelayedMessage(97, L["silence_warning"], "Urgent")
-			self:Bar(L["silence_bar"], 102, 36297)
+			self:DelayedMessage(99, L["silence_warning"], "Urgent")
+			self:Bar(L["silence_bar"], 104, 36297)
 		end
 		if db.grow then
 			self:Bar(L["grow_bar"]:format(growcount), 30, 36300)

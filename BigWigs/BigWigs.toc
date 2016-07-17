@@ -1,6 +1,6 @@
 ## Interface: 20400
 
-## Title: Big Wigs |cff7fff7f -Ace2-|r
+## Title: Big Wigs - Es Edition |cff7fff7f -Ace2-|r
 ## Title-zhCN: |cff7fff7f-Ace2-|r Big Wigs
 ## Notes: Modular, lightweight, non-intrusive approach to boss encounter warnings.
 ## Notes-ruRU: Модульный, облегчённый, босс мод. Оповещает и выводит таймеры способностей/действий боссов.
