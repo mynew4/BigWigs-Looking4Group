@@ -13,11 +13,13 @@ local enrageWarn = nil
 L:RegisterTranslations("enUS", function() return {
 	cmd = "Moroes",
 
-	engage_trigger = "Hmm, unannounced visitors. Preparations must be made.",
+	engage_trigger = "Hmm, unannounced visitors? Preparations must be made.",
 	engage_message = "%s Engaged - Vanish in ~30sec!",
 
 	vanish = "Vanish",
 	vanish_desc = "Estimated timers for when Moroes next vanishes.",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 	vanish_message = "Vanished! Next in ~30sec!",
 	vanish_warning = "Vanish Soon!",
 	vanish_bar = "~Vanish Cooldown",
@@ -39,6 +41,8 @@ L:RegisterTranslations("frFR", function() return {
 
 	vanish = "Disparition",
 	vanish_desc = "Prévient quand Moroes est susceptible de disparaître.",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 	vanish_message = "Disparu ! Prochain dans ~30 sec. !",
 	vanish_warning = "Disparition imminente !",
 	vanish_bar = "~Recharge Disparition",
@@ -57,6 +61,8 @@ L:RegisterTranslations("frFR", function() return {
 L:RegisterTranslations("deDE", function() return {
 	vanish = "Verschwinden",
 	vanish_desc = "Ungef\195\164re Zeitangabe f\195\188r Verschwinden",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 
 	garrote = "Erdrosseln",
 	garrote_desc = "Warnt welche Spieler von Erdrosseln betroffen sind",
@@ -83,6 +89,8 @@ L:RegisterTranslations("koKR", function() return {
 
 	vanish = "소멸",
 	vanish_desc = "모로스의 다음 소멸에 대한 예상 타이머입니다.",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 	vanish_message = "소멸! 다음은 약 30초 후!",
 	vanish_warning = "잠시 후 소멸!", 
 	vanish_bar = "~소멸 대기시간",
@@ -104,6 +112,8 @@ L:RegisterTranslations("zhCN", function() return {
 
 	vanish = "消失",
 	vanish_desc = "消失预计冷却计时条。",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 	vanish_message = "消失！约30秒后，再次消失！",
 	vanish_warning = "即将 消失！",
 	vanish_bar = "<消失 冷却>",
@@ -125,6 +135,8 @@ L:RegisterTranslations("zhTW", function() return {
 
 	vanish = "消失預警",
 	vanish_desc = "顯示摩洛消失提示",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 	vanish_message = "消失 - 30 秒再次消失",
 	vanish_warning = "摩洛即將消失",
 	vanish_bar = "消失倒數",
@@ -146,6 +158,8 @@ L:RegisterTranslations("esES", function() return {
 
 	vanish = "Desvanecer (Vanish)",
 	vanish_desc = "Temporizadores estimados para cuando Moroes se desvanece.",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 	vanish_message = "¡Desvanecer! ¡Siguiente en ~30sec!",
 	vanish_warning = "¡Desvanecer en breve!",
 	vanish_bar = "~Desvanecer",
@@ -167,6 +181,8 @@ L:RegisterTranslations("ruRU", function() return {
 
 	vanish = "Исчезновение",
 	vanish_desc = "Включает таймеры для следующего исчезновения ",
+	vanish_trigger1 = "You rang?",
+	vanish_trigger2 = "Now, where was I? Oh yes...",
 	vanish_message = "Исчез! Повтор через ~30 сек!",
 	vanish_warning = "Скоро Исчезновение!",
 	vanish_bar = "~перезарядка Исчезновения",
@@ -191,7 +207,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = boss
 mod.guid = 15687
 mod.toggleoptions = {"vanish", "enrage", -1, "garrote", "icon", "bosskill"}
-mod.revision = tonumber(("$Revision: 90001 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90002 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -224,13 +240,13 @@ function mod:Enrage()
 	end
 end
 
-function mod:Vanish(_, spellID)
+--[[ function mod:Vanish(_, spellID)
 	if self.db.profile.vanish then
 		self:IfMessage(L["vanish_message"], "Urgent", spellID, "Alert")
 		self:Bar(L["vanish_bar"], 30, spellID)
 		self:DelayedMessage(25, L["vanish_warning"], "Attention")
 	end
-end
+end ]]--
 
 function mod:CHAT_MSG_MONSTER_YELL(msg)
 	if msg == L["engage_trigger"] then
@@ -241,6 +257,9 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 			self:Bar(L["vanish_bar"], 30, 29448)
 			self:DelayedMessage(25, L["vanish_warning"], "Attention")
 		end
+	elseif msg == L["vanish_trigger1"] or L["vanish_trigger2"] then
+		self:Bar(L["vanish_bar"], 25, 29448)
+		self:DelayedMessage(20, L["vanish_warning"], "Attention")
 	end
 end
 

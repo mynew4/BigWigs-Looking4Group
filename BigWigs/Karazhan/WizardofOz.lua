@@ -19,7 +19,7 @@ local fmt = string.format
 L:RegisterTranslations("enUS", function() return {
 	cmd = "WizardofOz",
 
-	engage_trigger = "^Oh dear, we simply must find a way home!",
+	engage_trigger = "Oh dear, we simply must find a way home! The old wizard could be our only hope! Strawman, Roar, Tinhead, will you... wait! Oh golly, look! We have visitors!",
 
 	spawns = "Spawn Timers",
 	spawns_desc = "Timers for when the characters become active.",
@@ -133,7 +133,7 @@ mod.zonename = BZ["Karazhan"]
 mod.enabletrigger = {roar, tinhead, strawman, dorothee}
 mod.guid = 18168
 mod.toggleoptions = {"spawns", "light", "bosskill"}
-mod.revision = tonumber(("$Revision: 90000 $"):sub(12, -3))
+mod.revision = tonumber(("$Revision: 90002 $"):sub(12, -3))
 
 ------------------------------
 --      Initialization      --
@@ -155,13 +155,13 @@ function mod:CHAT_MSG_MONSTER_YELL(msg)
 		local swarn = L["spawns_warning"]
 		local sbar = L["spawns_bar"]
 		self:Bar(fmt(sbar, roar), 17, "INV_Staff_08")
-		self:DelayedMessage(12, fmt(swarn, roar), "Attention")
+		-- self:DelayedMessage(12, fmt(swarn, roar), "Attention")
 		self:Bar(fmt(sbar, strawman), 26, "Ability_Druid_ChallangingRoar")
-		self:DelayedMessage(21, fmt(swarn, strawman), "Attention")
+		-- self:DelayedMessage(21, fmt(swarn, strawman), "Attention")
 		self:Bar(fmt(sbar, tinhead), 35, "INV_Chest_Plate06")
-		self:DelayedMessage(30, fmt(swarn, tinhead), "Attention")
-		self:Bar(fmt(sbar, tito), 47.5, "Ability_Hunter_Pet_Wolf")
-		self:DelayedMessage(42.5, fmt(swarn, tito), "Attention")
+		-- self:DelayedMessage(30, fmt(swarn, tinhead), "Attention")
+		self:Bar(fmt(sbar, tito), 60, "Ability_Hunter_Pet_Wolf")
+		-- self:DelayedMessage(55, fmt(swarn, tito), "Attention")
 	end
 end
 

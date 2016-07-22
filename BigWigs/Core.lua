@@ -321,7 +321,7 @@ BigWigs = AceLibrary("AceAddon-2.0"):new(
 	"AceConsole-2.0",
 	"AceDB-2.0"
 )
-BigWigs.revision = tonumber(("$Revision: 90001 $"):sub(12, -3))
+BigWigs.revision = tonumber(("$Revision: 90002 $"):sub(12, -3))
 local BigWigs = BigWigs
 
 BigWigs:SetModuleMixins("AceEvent-2.0")
